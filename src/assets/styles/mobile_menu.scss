@@ -1,0 +1,83 @@
+@import 'variables.scss';
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: $primary-color;
+    z-index: 10;
+    padding: 1rem;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform .5s ease, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    
+    &.active {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding: 1rem 0rem;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 105%;
+        text-transform: uppercase;
+        color: #606060;
+    }
+
+    &__contacts {
+        display: flex;
+        list-style-type: none;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    &__img {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__connect-btn {
+        position: relative;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 320px;
+        height: 60px;
+        background-color: $secondary-color;
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 15px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+            background: #222;
+            transition: all .3s ease;
+        }
+    }
+}

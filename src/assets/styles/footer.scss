@@ -1,0 +1,163 @@
+@import 'variables.scss';
+
+.footer {
+  background-color: #000;
+  color: #fff;
+
+  &__container {
+    position: relative;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-mobile) {
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      padding: 2rem;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #818181;
+    padding-bottom: 1rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    img {
+      width: 60px;
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 50px;
+      }
+      @media (max-width: $breakpoint-mobile) {
+        width: 40px;
+      }
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 130%;
+      color: #fff;
+
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 21px;
+      }
+    }
+  }
+
+  &__nav {
+    margin-top: 1rem;
+
+    @media (min-width: $breakpoint-mobile) {
+      margin-top: 0;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+
+      @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    &-item {
+      margin-bottom: 0rem;
+      margin-right: 1rem;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 150%;
+      text-transform: capitalize;
+      color: #b9b9b9;
+
+      &:hover {
+        color:#fff;
+        transition: all .3s ease;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+      }
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 12px;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      position: absolute;
+      top: 11%;
+      right: 6%;
+      gap: 0.5rem;
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: left;
+    font-weight: 500;
+    font-size: 17px;
+    color: #999;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+
+    &-text {
+      display: none;
+
+      @media (max-width: $breakpoint-mobile) {
+        display: inline;
+      }
+    }
+  }
+}
